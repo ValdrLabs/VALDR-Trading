@@ -1,3 +1,4 @@
 pandas
 numpy
 python-dotenv>=1.2,<2.0
+massive>=2.12,<3.0
