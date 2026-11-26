@@ -1,8 +1,7 @@
 
 
 from valdr_trading.stock import Stock
-from valdr_trading.scanner import filter_by_adr
-from valdr_trading.scanner import filter_by_dollar_volume
+from valdr_trading.scanner import screen_stocks
 
 
 def main():
@@ -15,9 +14,9 @@ def main():
     print("VALDR Trading")
     print("--------------------")
 
-    candidates = filter_by_adr(stocks, minimum_adr=5.0)
-    candidates = filter_by_dollar_volume(
-    candidates,
+    candidates = screen_stocks(
+    stocks,
+    minimum_adr=5.0,
     minimum_dollar_volume=20_000_000
 )
 
