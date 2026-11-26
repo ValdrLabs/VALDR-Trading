@@ -21,7 +21,7 @@ def main():
     minimum_dollar_volume=20_000_000
 )
 
-    print("\nStocks meeting ADR criteria:")
+    print("\nStocks meeting all screening criteria:")
     for stock in candidates:
         print(stock.symbol, stock.adr)
 
