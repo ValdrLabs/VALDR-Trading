@@ -2,7 +2,15 @@
 
 from valdr_trading.stock import Stock
 from valdr_trading.scanner import screen_stocks
-
+from valdr_trading.data_engine.provider_factory import (
+    create_market_data_provider,
+)
+from valdr_trading.data_engine.services.market_data_service import (
+    MarketDataService,
+)
+def create_market_data_service() -> MarketDataService:
+    provider = create_market_data_provider()
+    return MarketDataService(provider)
 
 def main():
     stocks = [
